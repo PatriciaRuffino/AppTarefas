@@ -8,9 +8,25 @@ let lista = document.querySelector('#lista')
 let tarefas =[
     "estudar python", "estudar JavaScript", "estudar java", "assistir séries","fazer jump"
 ]
+function redenrizarTarefas(){
+    for(tarefas of tarefas){
+       //criar item da lista
+       let itemLista =  document.createElement('li')
 
-{/* <li class="list-group-item list-group-item-action">Estudar Java</li>
-<li class="list-group-item list-group-item-action">Estudar JavaScript</li>
-<li class="list-group-item list-group-item-action">Estudar Python</li>
-<li class="list-group-item list-group-item-action">Estudar React</li>
-<li class="list-group-item list-group-item-action">Estudar Infra</li> */}
+       //adicionar classes nos item da lista
+       itemLista.setAttribute('class','list-group-item list-group-item-action' )
+
+       //criar texto
+       let itemTexto = document.createTextNode(tarefas);
+
+       //adiciona o texto no item da lisa
+       itemLista.appendChild(itemTexto)
+
+       //adicionar o item da lista na lista
+       lista.appendChild(itemLista)
+       
+    }
+}
+
+redenrizarTarefas()
+
